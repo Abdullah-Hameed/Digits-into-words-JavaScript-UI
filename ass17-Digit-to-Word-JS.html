@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+var num=prompt("Enter Any Number: ");    
+var no=parseInt(num);
+
+var onetoNine = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+var tentoNineteen = ["Ten","Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+var TwentytoNinety= ["Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+var quo1=parseInt(no/100);
+if(quo1 != 0) {
+var temp= quo1*100;
+no-=temp;
+}
+
+var quo=parseInt(no/10);
+var rem = no%10;
+
+if(quo < 1) {
+if(quo1 != 0) {
+        alert(onetoNine[quo1-1] +" hundred and "+ onetoNine[rem-1]);
+    }
+    else {
+        alert(onetoNine[rem-1]);
+    }
+}
+else if(quo == 1) {
+    if(quo1 != 0){
+    alert(onetoNine[quo1-1] +" hundred and "+ tentoNineteen[rem]);
+}
+else {
+    alert(tentoNineteen[rem]);
+}
+}
+else {
+    var ans = TwentytoNinety[quo-2];
+    if(rem != 0){ 
+    ans+= " " + onetoNine [rem-1];    
+    }
+if(quo1 != 0) {
+
+alert(onetoNine[qou1-1] +" hundred and "+ ans);
+}
+else{
+    alert(ans);
+}
+}
+
+
+</script>
+</html>
